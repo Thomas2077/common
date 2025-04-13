@@ -5,7 +5,7 @@ plugins {
     `maven-publish`
 }
 
-group = "com.th"
+group = "com.thomas"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -28,7 +28,7 @@ dependencyManagement {
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
-            groupId = "com.th"
+            groupId = "com.thomas"
             artifactId = "kotlin-common"
             version = "1.0-SNAPSHOT"
             from(components["java"])

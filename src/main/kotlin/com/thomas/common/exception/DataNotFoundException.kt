@@ -1,4 +1,4 @@
-package com.th.common.exception
+package com.thomas.common.exception
 
 /**
  * @author yanzou

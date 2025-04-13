@@ -1,4 +1,4 @@
-package com.th.common.log
+package com.thomas.common.log
 
 /**
  * @author yanzou
