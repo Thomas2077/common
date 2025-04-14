@@ -1,6 +1,8 @@
 package com.thomas.common.db
 
+import com.thomas.common.config.SwaggerConfigProperties
 import jakarta.persistence.EntityManagerFactory
+import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.jdbc.DataSourceBuilder
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder
 import org.springframework.context.annotation.Bean
@@ -24,6 +26,7 @@ import javax.sql.DataSource
     entityManagerFactoryRef = "entityManagerFactory",
     transactionManagerRef = "transactionManagerRef"
 )
+@EnableConfigurationProperties(DbConfigProperties::class)
 class JpaCommonConfig(private var configProperties: DbConfigProperties) {
     @Bean
     @Primary
@@ -47,7 +50,7 @@ class JpaCommonConfig(private var configProperties: DbConfigProperties) {
 
     @Bean
     @Primary
-    fun transactionManager(emf: EntityManagerFactory): PlatformTransactionManager {
+    fun transactionManagerRef(emf: EntityManagerFactory): PlatformTransactionManager {
         return JpaTransactionManager(emf)
     }
 }

@@ -16,11 +16,11 @@ repositories {
 
 dependencies {
     api("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.slf4j:slf4j-api:2.0.9")
-    runtimeOnly("ch.qos.logback:logback-classic:1.4.12")
-    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
+    api("org.slf4j:slf4j-api:2.0.9")
+    runtimeOnly("ch.qos.logback:logback-classic:1.5.13")
+    api("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
 
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    api("org.springframework.boot:spring-boot-starter-data-jpa")
     runtimeOnly("com.h2database:h2") // ✅ 内存数据库
 }
 
