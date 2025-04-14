@@ -6,4 +6,4 @@ package com.thomas.common.exception
  * @version V1.0.0
  * @description
  **/
-class DataNotFoundException(message: String) : RuntimeException(message)
+class DataNotFoundException(message: String): RuntimeException(message)

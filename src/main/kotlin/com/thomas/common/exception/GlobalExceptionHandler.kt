@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.RestControllerAdvice
 @RestControllerAdvice
 class GlobalExceptionHandler {
     @ExceptionHandler(RuntimeException::class)
-    fun handleRuntimeException(ex: RuntimeException): ResponseEntity<String>{
+    fun handleRuntimeException(ex: RuntimeException): ResponseEntity<String> {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("")
     }
 
     @ExceptionHandler
-    fun handleDataNotFoundException(ex: DataNotFoundException) : ResponseEntity<String>{
+    fun handleDataNotFoundException(ex: DataNotFoundException): ResponseEntity<String> {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("")
     }
 }
