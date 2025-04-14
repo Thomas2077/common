@@ -12,9 +12,7 @@ data class ApiResponse<T>(
     var code: Int = 200,
     var message: String = "success",
     var data: T? = null,
+    var url: String? = null,
     val timestamp: Long = System.currentTimeMillis()
-){
-    init {
-        require(code > 0 ){"id must be positive"}
-    }
-}
+)
+

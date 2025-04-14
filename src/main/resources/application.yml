@@ -1,0 +1,8 @@
+# For testing
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+swagger:
+  title: 统一 API 文档
+  description: 由 common 模块配置
+  version: 1.0.0
