@@ -20,12 +20,9 @@ class BookController {
 
     @GetMapping
     fun getAllBooks(): List<Book> {
-
         return books
     }
 
     @GetMapping("/{id}")
     fun getBookById(@PathVariable id: Long): Book? = books.find { it.id == id }
-
-
 }
