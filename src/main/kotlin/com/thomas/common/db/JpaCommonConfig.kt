@@ -28,6 +28,7 @@ import javax.sql.DataSource
 )
 @EnableConfigurationProperties(DbConfigProperties::class)
 class JpaCommonConfig(private var configProperties: DbConfigProperties) {
+    
     @Bean
     @Primary
     fun dataSource(): DataSource {
