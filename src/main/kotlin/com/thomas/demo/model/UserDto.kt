@@ -1,6 +1,5 @@
 package com.thomas.demo.model
 
-import jakarta.validation.constraints.Max
 import jakarta.validation.constraints.NotBlank
 
 /**
@@ -10,7 +9,6 @@ import jakarta.validation.constraints.NotBlank
  * @description
  **/
 data class UserDto(
-    @field:Max(value = 20L)
     var id: Long? = null,
 
     @field:NotBlank(message = "name should not be null")

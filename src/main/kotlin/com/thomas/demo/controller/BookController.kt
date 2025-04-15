@@ -19,9 +19,8 @@ class BookController {
     private var books = mutableListOf<Book>()
 
     @GetMapping
-    fun getAllBooks(): List<Book> {
-        return books
-    }
+    fun getAllBooks(): List<Book> = books
+
 
     @GetMapping("/{id}")
     fun getBookById(@PathVariable id: Long): Book? = books.find { it.id == id }
