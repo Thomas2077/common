@@ -6,6 +6,7 @@ package com.thomas.demo.model
  * @version V1.0.0
  * @description
  **/
+
 data class Book (
     var id: Long,
     var title: String,

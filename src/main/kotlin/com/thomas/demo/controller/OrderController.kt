@@ -1,5 +1,6 @@
 package com.thomas.demo.controller
 
+import com.thomas.demo.service.UserService
 import com.thomas.demo.model.Order
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -15,7 +16,7 @@ import java.time.LocalDateTime
  **/
 @RestController
 @RequestMapping("/order")
-class OrderController {
+class OrderController(private var userService: UserService) {
 
     @GetMapping("/{id}")
     fun getOrder(@PathVariable id: Long): Order {

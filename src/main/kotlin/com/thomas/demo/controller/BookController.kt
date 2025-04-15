@@ -1,5 +1,7 @@
 package com.thomas.demo.controller
 
+import com.thomas.common.log.logger
+import com.thomas.common.response.ApiResponse
 import com.thomas.demo.model.Book
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -21,18 +23,18 @@ class BookController {
     private var books = mutableListOf<Book>()
 
     @GetMapping
-    fun getAllBooks(): List<Book>{
-        
+    fun getAllBooks(): List<Book> {
+
         return books
     }
 
     @GetMapping("/{id}")
-    fun getBookById(@PathVariable id: Long): Book? = books.find{it.id == id}
+    fun getBookById(@PathVariable id: Long): Book? = books.find { it.id == id }
 
     @PostMapping
-    fun addBook(@RequestBody book : Book) : Book{
+    fun addBook(@RequestBody book: Book): ApiResponse<String> {
         books.add(book)
-        return book
+        return ApiResponse(123)
     }
 
 }
