@@ -1,7 +1,7 @@
 package com.thomas.demo.entity
 
 import jakarta.persistence.*
-import org.springframework.boot.autoconfigure.domain.EntityScan
+
 
 /**
  * @author yanzou
@@ -13,9 +13,8 @@ import org.springframework.boot.autoconfigure.domain.EntityScan
 @Entity
 class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_gen")
-    @SequenceGenerator(name = "user_gen", sequenceName = "user_seq")
-    @Column(name = "ID", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // ✅ 推荐使用 IDENTITY 或 AUTO
+    @Column(name = "ID")
     var id: Long? = null
 
     @Column(name = "NAME", nullable = true)
