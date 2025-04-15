@@ -1,0 +1,7 @@
+-- schema.sql
+CREATE TABLE USERS (
+    ID BIGINT PRIMARY KEY,
+    NAME VARCHAR(255)
+);
+
+INSERT INTO USERS (ID, NAME) VALUES (1, 'Thomas');
