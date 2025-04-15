@@ -22,6 +22,8 @@ dependencies {
 
     api("org.springframework.boot:spring-boot-starter-data-jpa")
     runtimeOnly("com.h2database:h2") // ✅ 内存数据库
+
+    api("p6spy:p6spy:3.9.1")
 }
 
 dependencyManagement {
