@@ -10,9 +10,9 @@ import jakarta.validation.constraints.NotBlank
  * @description
  **/
 data class UserDto(
-    @Max(value = 20L)
+    @field:Max(value = 20L)
     var id: Long? = null,
 
-    @NotBlank(message = "name should not be null")
+    @field:NotBlank(message = "name should not be null")
     var name: String = "123",
 )
