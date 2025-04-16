@@ -1,6 +1,7 @@
 package com.thomas.demo.entity
 
 import jakarta.persistence.*
+import java.io.Serializable
 
 
 /**
@@ -9,14 +10,16 @@ import jakarta.persistence.*
  * @version V1.0.0
  * @description
  **/
-@Table(name = "users")
-@Entity
-class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // ✅ 推荐使用 IDENTITY 或 AUTO
-    @Column(name = "ID")
-    var id: Long? = null
 
-    @Column(name = "NAME", nullable = true)
+@Entity
+@Table(name = "users")
+data class User(
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID", nullable = false)
+    val id: Long? = null,
+
+    @Column(name = "NAME")
     var name: String = ""
-}
+) : Serializable
