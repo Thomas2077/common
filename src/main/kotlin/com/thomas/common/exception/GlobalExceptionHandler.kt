@@ -36,7 +36,7 @@ class GlobalExceptionHandler {
     fun handleValidation(ex: MethodArgumentNotValidException, request: HttpServletRequest): ResponseEntity<ErrorResponse> {
         val url = request.requestURL.toString()
         val errors = ex.bindingResult.fieldErrors.associate {
-            it.field to (it.defaultMessage ?: "validtion error")
+            it.field to (it.defaultMessage ?: "validation error")
         }
         return ResponseEntity
             .badRequest()
