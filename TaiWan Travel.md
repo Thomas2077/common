@@ -100,4 +100,6 @@ For hotels, I’d recommend staying near Taipei Main Station. It’s a very conv
 
 
 If you want to visit the cookie shop where I bought the biscuits for you, the store is called L’Atelier Lotus (甜滿), and the address is No. 10, Lane 31, Yongkang Street, Da’an District, Taipei City. It’s a well-known souvenir shop in the Yongkang Street area.  ￼
-- https://maps.app.goo.gl/J28JmKjnJZ2wMs6y5
+- https://maps.app.goo.gl/J28JmKjnJZ2wMs6y5  
+## Train IC Card
+One small tip: after you arrive at Taoyuan Airport, you can get an EasyCard near the airport MRT area on the basement level. You can usually buy it at a convenience store or directly from the MRT station counter or machine, and it makes getting around Taipei much easier.
